@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "to-do-list-2215f": {
+      "hosting": {
+        "to-do-list": [
+          "to-do-list-2215f"
+        ]
+      }
+    }
+  }
+}
