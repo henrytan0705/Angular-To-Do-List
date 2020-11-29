@@ -4,5 +4,7 @@
 <button (click)="addToList(input)">Add</button>
 
 <ul>
-  <li *ngFor="let item of list">{{ item }}</li>
+  <li *ngFor="let item of list; let i = index">
+    {{ item }}<button (click)="removeFromList(i)">X</button>
+  </li>
 </ul>

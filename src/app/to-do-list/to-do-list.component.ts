@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDoListComponent implements OnInit {
   list = ['Task1', 'Task2', 'Task3'];
-  input = '';
+  input: Item;
 
   constructor() {}
 
@@ -15,8 +15,7 @@ export class ToDoListComponent implements OnInit {
     this.list.push(item);
   }
 
-  removeFromList(item) {
-    let idx = this.list.indexOf(item);
+  removeFromList(idx) {
     this.list.splice(idx, 1);
   }
 
