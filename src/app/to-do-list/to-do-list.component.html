@@ -1,0 +1,8 @@
+<h1>To Do List</h1>
+
+<input type="text" placeholder="write todo here" [(ngModel)]="input" />
+<button (click)="addToList(input)">Add</button>
+
+<ul>
+  <li *ngFor="let item of list">{{ item }}</li>
+</ul>
