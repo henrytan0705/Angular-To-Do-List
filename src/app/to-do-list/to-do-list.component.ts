@@ -6,17 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./to-do-list.component.css']
 })
 export class ToDoListComponent implements OnInit {
-  list = ['Task1', 'Task2', 'Task3'];
-  input: Item;
+  list = [
+    { title: 'Task1', description: 'study angular' },
+    { title: 'Task2', description: 'study react' },
+    { title: 'Task3', description: 'study vue' }
+  ];
+
+  title;
+  description;
 
   constructor() {}
 
-  addToList(item) {
+  addToList(title, description) {
+    const item = { title, description };
     this.list.push(item);
-  }
-
-  removeFromList(idx) {
-    this.list.splice(idx, 1);
   }
 
   ngOnInit(): void {}

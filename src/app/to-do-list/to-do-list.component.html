@@ -1,10 +1,18 @@
-<h1>To Do List</h1>
+<div>
+  <h1>To Do List</h1>
 
-<input type="text" placeholder="write todo here" [(ngModel)]="input" />
-<button (click)="addToList(input)">Add</button>
+  <input type="text" placeholder="Title" [(ngModel)]="title" />
+  <br />
+  <input type="text" placeholder="Description" [(ngModel)]="description" />
+  <br />
+  <button (click)="addToList(title, description)">Add</button>
 
-<ul>
-  <li *ngFor="let item of list; let i = index">
-    {{ item }}<button (click)="removeFromList(i)">X</button>
-  </li>
-</ul>
+  <br />
+
+  <todo-item
+    *ngFor="let item of list; let i = index"
+    [value]="item"
+    [list]="list"
+    [index]="i"
+  ></todo-item>
+</div>
