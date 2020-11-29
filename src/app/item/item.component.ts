@@ -6,9 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  // title: string;
-  // description: string;
   info: object;
+  done: boolean = false;
+
   constructor() {}
 
   @Input() value;
@@ -17,6 +17,11 @@ export class ItemComponent implements OnInit {
 
   removeItem(index) {
     this.list.splice(index, 1);
+  }
+
+  toggleStatus() {
+    this.done = !this.done;
+    console.log(this.done);
   }
 
   ngOnInit(): void {}

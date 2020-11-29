@@ -1,0 +1,9 @@
+.add-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+
+.list-header {
+  text-align: center;
+}

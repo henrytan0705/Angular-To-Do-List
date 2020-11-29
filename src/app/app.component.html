@@ -1,3 +1,12 @@
-<to-do-list></to-do-list>
+<nb-layout>
+  <nb-layout-header fixed>
+    <!-- Insert header here -->
+    <h1>To Do List</h1>
+  </nb-layout-header>
 
-<router-outlet></router-outlet>
+  <nb-layout-column>
+    <to-do-list></to-do-list>
+
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+</nb-layout>
